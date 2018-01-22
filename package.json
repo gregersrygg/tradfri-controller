@@ -1,0 +1,17 @@
+{
+  "name": "tradfri-controller",
+  "version": "1.0.0",
+  "description": "Control an IKEA Tradfri light using GPIO buttons on a Raspberry Pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gregers Rygg",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "gpio-button": "^0.2.0",
+    "multicast-dns": "^6.2.2",
+    "node-tradfri-client": "^0.6.0"
+  }
+}
