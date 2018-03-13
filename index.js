@@ -59,10 +59,10 @@ async function main() {
     });
     tradfri.observeDevices();
 
-    button9.on('press', () => toggleColor('ffe0a0'));
-    button10.on('press', () => toggleColor('ff0000'));
-    button11.on('press', () => toggleColor('00ff00'));
-    button22.on('press', () => toggleColor('0000ff'));
+    button9.on('press', () => toggleColor('00ff00'));
+    button10.on('press', () => toggleColor('0000ff'));
+    button11.on('press', () => toggleColor('ff0000'));
+    button22.on('press', () => toggleColor('ffe0a0'));
 
     async function toggleColor(c) {
         const lightId = Object.keys(lightbulbs).find(id => lightbulbs[id].name == lightName);
