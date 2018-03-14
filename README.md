@@ -68,6 +68,7 @@ Install yarn
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
     sudo apt-get update && sudo apt-get install yarn
+    echo export PATH=\$PATH:$(yarn global bin) >> .profile
 
 ## Install tradfri-controller
 
@@ -90,4 +91,10 @@ Add returned identity and pre shared key (psk) to ~/.profile
 
 Log in & out or run `source ~/.profile` to export the env variables to the current shell. Then start the app with light name as argument.
 
-    node index.js Kidsroom
+    node index.js "Sofa"
+
+Set up PM2 to keep it running
+
+    pm2 start -n tradfri-controller /home/pi/tradfri-controller/index.js -- "Sofa"
+    pm2 save
+    pm2 startup  # NB! follow instructions
